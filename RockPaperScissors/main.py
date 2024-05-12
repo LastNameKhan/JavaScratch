@@ -47,6 +47,6 @@ else:
 if (take_input_from_user == 0 and random_int_generators == 2) or ( take_input_from_user == 2 and random_int_generators == 1) or (take_input_from_user == 1 and random_int_generators == 0):
     print("You won!")
 elif take_input_from_user == random_int_generators:
-    print("Its and Draw")
+    print("Its an Draw")
 else:
     print("Computer won!")
