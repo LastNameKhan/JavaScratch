@@ -1,5 +1,68 @@
 import random
-# Step1 - Pick and random word
+
+stages = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
+
+logo = ''' 
+ _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/    '''
+
+                                                                    
+                                    
 
 word_list = [
     "elephant", "banana", "guitar", "sunshine", "laptop", "mountain", "chocolate", "umbrella", "telescope", "kangaroo",
@@ -13,6 +76,8 @@ word_list = [
     "peacock", "jellyfish", "cornucopia", "spacesuit", "coconut", "rattlesnake", "toothpaste", "bobsled", "snowman", "grapefruit",
     "windmill", "bowtie", "seashell", "caterpillar", "lightbulb", "mosquito", "dolphin", "dandelion", "earmuffs", "raincoat"
 ]
+
+lives = 6
 
 
 choosen_one = random.choice(word_list)
@@ -32,6 +97,12 @@ while not end_of_game:
         char_guess = choosen_one[position]
         if char_guess == user_input_check:
             empty_blanks[position] = char_guess
+        
+    if char_guess not in choosen_one:
+        lives -= 1
+        if lives == 0:
+            end_of_game = True
+            print("You Lose")
     
     print(empty_blanks)
 
