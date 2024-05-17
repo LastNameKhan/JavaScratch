@@ -21,7 +21,6 @@ while not bid_finish:
                 winner_name = key
                 print(f"The winner is {winner_name} with a bid of ${winner_amount}")
     elif participants_ans == "yes":
-        clear()
         
             
         
