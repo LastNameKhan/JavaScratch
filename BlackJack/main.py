@@ -3,7 +3,7 @@ import random
 cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
 
 game_start = input("Are you ready to start the Game Type 'y' or 'n': ").lower()
-another_Hit = False
+another_Hit = True
 
 if game_start == 'y':
     player_one_card = random.sample(cards,2)
@@ -29,7 +29,7 @@ def win_checker(plus_one_total):
          
 
 
-while not another_Hit:
+while another_Hit:
     plus_one_input = input("Would you like to take another Hit!!!? 'y' or 'n': ").lower()
     if plus_one_input == 'y':
         plus_one = random.sample(cards,1)
@@ -39,9 +39,9 @@ while not another_Hit:
         print(plus_one_total)
         print(cpu_card)
         print(cpu_total)
-        win_checker(player_one_total)
+        # win_checker(player_one_total)
     elif plus_one_input == "n":
-        another_Hit = True
+        another_Hit = False
         win_checker(plus_one_total)
     else:
         print("Invalid Input by the user.")
