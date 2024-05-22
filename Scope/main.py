@@ -31,3 +31,16 @@ def drink_health():
     
 drink_health()
 
+# Modifying Global Scope
+
+friends = 1
+def increase_friends():
+    # using global keyword to modify the global varibale
+    # Without using global keyword we cannot do it
+    global friends
+    friends = 2
+    print(f"Friends inside function: {friends}")
+
+increase_friends()
+print(f"Friends outside function: {friends}")
+
