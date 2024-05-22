@@ -2,9 +2,34 @@ import random
 
 print("Welcome to the Number Guessing Game!")
 print("I'm thinking of a number between 1 and 100.")
-print("Choose difficulty level 'easy' or 'hard': ")
+user_difficulty = input("Choose difficulty level 'easy' or 'hard': ").lower()
 
-# Choose an random number between 1 to 100
-# Give user 10 attempts to guess the number when user choose easy level
-# Give user 5 attempts to guess the number when user chooses hard level
+easy_chances = 10
+hard_chances = 5
+number = random.randint(1,101)
+
+def result(chances):
+    while not chances == 0:
+        user_guess = int(input("Guess the number"))
+        if user_guess == number:
+            print("Yeah!!, You have won!")
+        elif user_guess > number:
+            print("Too High!")
+            chances -= 1
+            print(f"You have {chances} chances left.")
+        elif user_guess < number:
+            print("Too Low")
+            chances -= 1
+            print(f"You have {chances} chances left.")
+        elif chances == 0:
+            print("You have no more attempts Left. Better Luck Next Time!")
+
+
+
+if user_difficulty == "hard":
+    result(5)
+elif user_difficulty == "easy":
+    result(10)
+
+
 
