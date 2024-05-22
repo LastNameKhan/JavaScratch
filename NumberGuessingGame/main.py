@@ -7,3 +7,4 @@ print("Choose difficulty level 'easy' or 'hard': ")
 # Choose an random number between 1 to 100
 # Give user 10 attempts to guess the number when user choose easy level
 # Give user 5 attempts to guess the number when user chooses hard level
+
