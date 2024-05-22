@@ -44,3 +44,15 @@ def increase_friends():
 increase_friends()
 print(f"Friends outside function: {friends}")
 
+# Global Constants
+# Varibales which you define and never plan on changing them again
+# we can declare those variables in complete Upercase which we do not wish to change 
+
+PI = 3.14159
+URL = "https:/www.google.com"
+TWITTER_HANDLE = "@KHANAMAN"
+
+def calc():
+    TWITTER_HANDLE
+
+
