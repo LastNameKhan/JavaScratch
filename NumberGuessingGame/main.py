@@ -7,12 +7,16 @@ user_difficulty = input("Choose difficulty level 'easy' or 'hard': ").lower()
 easy_chances = 10
 hard_chances = 5
 number = random.randint(1,101)
+print(number)
+
 
 def result(chances):
-    while not chances == 0:
-        user_guess = int(input("Guess the number"))
+    game_stop = False
+    while not game_stop and chances != 0:
+        user_guess = int(input("Guess the number: "))
         if user_guess == number:
             print("Yeah!!, You have won!")
+            game_stop = True
         elif user_guess > number:
             print("Too High!")
             chances -= 1
@@ -21,7 +25,7 @@ def result(chances):
             print("Too Low")
             chances -= 1
             print(f"You have {chances} chances left.")
-        elif chances == 0:
+        else:
             print("You have no more attempts Left. Better Luck Next Time!")
 
 
