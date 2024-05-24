@@ -27,6 +27,8 @@ def compare():
     print(vs)
     Comapre_B_Followers = extract_data()
     print(Comapre_B_Followers)
+    if Comapre_A_Followers == Comapre_B_Followers:
+        Comapre_B_Followers = extract_data()
     user_input = input("Who has more followers? Type 'A' or 'B'")
     if user_input == "A" and Comapre_A_Followers > Comapre_B_Followers:
         score += 1
