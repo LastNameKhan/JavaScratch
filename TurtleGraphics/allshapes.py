@@ -3,17 +3,20 @@ from turtle import Turtle, Screen
 runner = Turtle()
 number_of_angles = 3
 
+
 for i in range(number_of_angles):
     angle = 360/ number_of_angles
     runner.forward(100)
     runner.right(angle)
 
 def square():
+    """To Print the Square"""
     for i in range(4):
         runner.forward(100)
         runner.right(90)
 
 def triangle():
+    """To Print the Triangle"""
     for i in range(3):
         runner.forward(100)
         runner.right(120)
