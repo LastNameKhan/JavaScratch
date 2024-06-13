@@ -15,10 +15,10 @@ def randomColor():
     return colours
 
 
-for i in range(40):
+for i in range(100):
     circleTur.color(randomColor())
     circleTur.circle(100)
-    circleTur.right(10)
+    circleTur.right(4)
 
 screen = Screen()
 screen.exitonclick()
