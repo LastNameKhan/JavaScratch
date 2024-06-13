@@ -15,6 +15,9 @@ def counterClockwise():
 
 def clear():
     toto.clear()
+    toto.penup()
+    toto.home()
+    toto.pendown()
 
 screen = Screen()
 screen.listen()
