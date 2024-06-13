@@ -26,16 +26,22 @@ color_list = [(250, 248, 245), (251, 246, 249), (242, 249, 246), (241, 246, 250)
 
 turtle.colormode(255)
 timmy = Turtle()
+timmy.penup()
 timmy.setheading(225)
-timmy.forward(250)
+timmy.forward(300)
 timmy.setheading(0)
+number_of_dots = 100
 
-for _ in range(10):
-    timmy.dot(10, random.choice(color_list))
-    timmy.penup()
+for dot_count in range(1, number_of_dots + 1):
+    timmy.dot(20, random.choice(color_list))
     timmy.forward(50)
 
-
+    if dot_count % 10 == 0:
+        timmy.setheading(90)
+        timmy.forward(50)
+        timmy.setheading(180)
+        timmy.forward(500)
+        timmy.setheading(0)
 
 screen = Screen()
 screen.exitonclick()
