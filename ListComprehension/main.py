@@ -17,3 +17,8 @@ print(new_string)
 # Working with the range in List Comprehension
 new_range_data = [n for n in range(1, 5)]
 print(new_range_data)
+
+name_list = ["Aman", "khan", "Rahul", "Harshit", "Choke", "Sabudana"]
+shot_name_list = [n for n in name_list if len(n) <= 5]
+long_name_list = [n.upper() for n in name_list if len(n) > 5]
+print(long_name_list)
