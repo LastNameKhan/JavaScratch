@@ -17,10 +17,11 @@ while not game_is_on:
     data = pandas.read_csv("50_states.csv")
     state_name = data["state"].tolist()
     if answer_state == "exit":
-        missing_states = []
-        for state in state_name:
-            if state not in guessed_state:
-                missing_states.append(state)
+        # missing_states = []
+        # for state in state_name:
+        #     if state not in guessed_state:
+        #         missing_states.append(state)
+        missing_states = [state for state in state_name if state not in guessed_state]
         data_to_csv = {
             "missing_state" : missing_states
         }
